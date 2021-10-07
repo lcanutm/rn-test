@@ -149,41 +149,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#000",
-    // paddingTop: Platform.select({ ios: 0, android: 10 }),
-  },
-  tabs: {
-    flexDirection: "row",
-  },
-  tab: {
-    flex: 1,
-    height: 30,
-    alignItems: "center",
-    justifyContent: "flex-end",
-  },
-  tabTitle: {
-    color: "#EEE",
-  },
-  tabTitleActive: {
-    fontWeight: "700",
-    color: "#FFF",
-  },
-  footer: {
-    width,
-    height: 50,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-  },
-  footerButton: {
-    flexDirection: "row",
-    marginLeft: 15,
-  },
-  footerText: {
-    fontSize: 16,
-    color: "#FFF",
-    textAlign: "center",
   },
 });

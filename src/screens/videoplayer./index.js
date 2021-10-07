@@ -31,7 +31,6 @@ const VideoPlayer = (props) => {
             rate={1.0}
             style={styles.backgroundVideo}
             onError={videoError}
-            style={{ width: width - 40, height: 300 }}
           />
         </View>
       </View>
@@ -48,5 +47,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginHorizontal: 25,
+  },
+  backgroundVideo: {
+    width: width - 40,
+    height: 300,
   },
 });

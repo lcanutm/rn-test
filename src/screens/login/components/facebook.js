@@ -82,9 +82,6 @@ const LoginWithFacebook = (props) => {
 export default LoginWithFacebook;
 
 const styles = StyleSheet.create({
-  contentStyle: { paddingHorizontal: 20, paddingVertical: 25, flex: 1 },
-  viewStyle: { width: "100%", alignItems: "center" },
-  mainText: { color: "white", marginBottom: 10 },
   buttonTextStyle: { color: "#110415", alignSelf: "center", fontSize: 14 },
   buttonStyle: {
     width: "100%",

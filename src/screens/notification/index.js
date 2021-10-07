@@ -134,9 +134,6 @@ async function registerForPushNotificationsAsync() {
 }
 
 const styles = StyleSheet.create({
-  contentStyle: { paddingHorizontal: 20, paddingVertical: 25, flex: 1 },
-  viewStyle: { width: "100%", alignItems: "center" },
-  mainText: { marginBottom: 10 },
   buttonTextStyle: { alignSelf: "center", color: "#110415", fontSize: 14 },
   buttonStyle: {
     width: "100%",

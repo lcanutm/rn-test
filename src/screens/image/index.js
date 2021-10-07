@@ -154,11 +154,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "white",
   },
-  carousel: {
-    height: WINDOW_WIDTH - BASE_PADDING * 2,
-    width: WINDOW_WIDTH - BASE_PADDING * 2,
-    backgroundColor: "white",
-  },
   contain: {
     flex: 1,
     height: 150,

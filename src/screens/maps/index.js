@@ -51,12 +51,6 @@ export default function Maps(props) {
         onPress={(e) => {
           setCoordenadas(e.nativeEvent.coordinate);
         }}
-        initialRegion={{
-          latitude: 23.1136,
-          longitude: -82.3666,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-        }}
       >
         <Marker
           draggable
@@ -76,9 +70,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-  },
-  map: {
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height,
   },
 });
