@@ -22,10 +22,10 @@ const VideoPlayer = (props) => {
       <View style={styles.container}>
         <View>
           <Video
-            source={require("../../assets/video.mp4")}
-            //   source={{
-            //     uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
-            //   }}
+            // source={require("../../assets/video.mp4")}
+            source={{
+              uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+            }}
             resizeMode="cover"
             useNativeControls
             rate={1.0}
