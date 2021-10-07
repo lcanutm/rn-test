@@ -1,0 +1,2 @@
+export const DESTROY_SESSION = 'DESTROY_SESSION'
+export const SET_PROFILE = 'SET_PROFILE'
