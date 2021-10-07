@@ -326,12 +326,6 @@ export default function SearchPlaces(props) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   searchContainer: {
     position: "absolute",
     top: 10,

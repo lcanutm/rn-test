@@ -8,12 +8,10 @@ const INITIAL_STATE = {
 const profileReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SET_PROFILE:
-      let name = action.payload.name;
-      let photoUrl = action.payload.photoUrl;
       return {
         ...state,
-        name,
-        photoUrl,
+        name: action.payload.name,
+        photoUrl: action.payload.photoUrl,
       };
     default:
       return state;
