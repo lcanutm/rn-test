@@ -3,7 +3,8 @@ import * as Facebook from "expo-facebook";
 const firebase = require("firebase");
 
 import { FACEBOOK_APP_ID } from "../../../config/constants";
-import { Icon, View, Text } from "native-base";
+import { View, Text } from "native-base";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { HOME_SCREEN } from "../../../utils/screenName";
 import { useDispatch } from "react-redux";
@@ -64,14 +65,14 @@ const LoginWithFacebook = (props) => {
 
   return (
     <TouchableOpacity style={styles.buttonStyle} onPress={handleAuth}>
-      <View style={{ flex: 1 }}>
-        <Icon
-          style={{ margin: 0, color: "#4ba3ff" }}
+      <View style={{ flex: 1.5 }}>
+        <MaterialCommunityIcons
+          style={{ margin: 0, fontSize: 30 }}
           name="facebook"
-          type="MaterialCommunityIcons"
-        ></Icon>
+          color="#4ba3ff"
+        ></MaterialCommunityIcons>
       </View>
-      <View style={{ alignItems: "center", width: "90%", paddingRight: "10%" }}>
+      <View style={{ alignItems: "center", flex: 9, paddingRight: "10%" }}>
         <Text uppercase style={styles.buttonTextStyle}>
           Inicia con Facebook
         </Text>

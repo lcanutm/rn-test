@@ -1,19 +1,11 @@
-import { Container } from "native-base";
-import React, { useRef, View } from "react";
+import React from "react";
+import { Container, View } from "native-base";
 import { Dimensions, StyleSheet } from "react-native";
 import { Video } from "expo-av";
 
 const { width } = Dimensions.get("window");
 
-const VideoPlayer = (props) => {
-  let videoPlayer = useRef();
-
-  const goFullScreen = () => {
-    if (videoPlayer.current) {
-      videoPlayer.current.presentFullscreenPlayer();
-    }
-  };
-
+const PlayVideo = (props) => {
   const videoError = (e) => {
     console.log(e);
   };
@@ -38,7 +30,7 @@ const VideoPlayer = (props) => {
   );
 };
 
-export default VideoPlayer;
+export default PlayVideo;
 
 const styles = StyleSheet.create({
   container: {

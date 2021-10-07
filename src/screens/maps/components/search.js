@@ -1,9 +1,7 @@
 import {
-  Button,
   Card,
   Container,
   DefaultTabBar,
-  Icon,
   Input,
   Text,
   Tab,
@@ -11,19 +9,15 @@ import {
   TabHeading,
   CardItem,
 } from "native-base";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import React, { useState } from "react";
 import {
   StyleSheet,
   View,
   Dimensions,
-  TextInput,
   TouchableOpacity,
   FlatList,
 } from "react-native";
-// import Placesearch from 'react-native-placesearch';
-// import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-// import Autocomplete from 'react-native-autocomplete-input';
-import { API_KEY } from "../../../config/constants";
 import { places } from "./places";
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
@@ -99,15 +93,14 @@ export default function SearchPlaces(props) {
                 Ver en el mapa
               </Text>
               {xCategoria && (
-                <Icon
+                <MaterialCommunityIcons
                   onPress={() => {
                     setFiltrando(false);
                     setTexto("");
                   }}
-                  type="MaterialCommunityIcons"
                   name="close"
-                  style={{ flex: 1 }}
-                ></Icon>
+                  style={{ flex: 1, fontSize: 30 }}
+                ></MaterialCommunityIcons>
               )}
             </View>
             <FlatList
@@ -204,16 +197,16 @@ export default function SearchPlaces(props) {
                         marginVertical: 20,
                       }}
                     >
-                      <Icon
+                      <MaterialCommunityIcons
                         name="food"
-                        type="MaterialCommunityIcons"
                         style={{
                           fontSize: 40,
                           color: "white",
                           backgroundColor: "#a7ce36",
-                          borderRadius: 20,
+                          borderRadius: 30,
+                          padding: 5,
                         }}
-                      ></Icon>
+                      ></MaterialCommunityIcons>
                       <Text
                         style={{
                           fontSize: 16,

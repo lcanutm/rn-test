@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { LogBox, StyleSheet } from "react-native";
 import { Provider } from "react-redux";
 import { store } from "./src/redux/store";

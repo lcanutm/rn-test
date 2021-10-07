@@ -7,15 +7,16 @@ import {
   Tabs,
   TabHeading,
   DefaultTabBar,
-  Icon,
 } from "native-base";
-import { BackHandler, Keyboard, Platform } from "react-native";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { Keyboard, Platform } from "react-native";
 import Maps from "../maps";
 import SearchPlaces from "../maps/components/search";
 import Profile from "../profile";
 import PushNotification from "../notification";
-import VideoPlayer from "../videoplayer.";
 import ImageVisor from "../image";
+import PlayVideo from "../videoplayer";
 
 const isIOs = Platform.OS === "ios";
 const toolbarHeight = isIOs ? 64 : 56;
@@ -98,10 +99,12 @@ const Home = (props) => {
                   justifyContent: "center",
                 }}
               >
-                <Icon
-                  type="MaterialIcons"
+                <MaterialIcons
                   name="home"
-                  style={{ color: currentTab === 0 ? "black" : "white" }}
+                  style={{
+                    color: currentTab === 0 ? "black" : "white",
+                    fontSize: 30,
+                  }}
                 />
                 <Text
                   uppercase
@@ -138,10 +141,12 @@ const Home = (props) => {
                   justifyContent: "center",
                 }}
               >
-                <Icon
-                  type="MaterialIcons"
+                <MaterialIcons
                   name="search"
-                  style={{ color: currentTab === 1 ? "black" : "white" }}
+                  style={{
+                    color: currentTab === 1 ? "black" : "white",
+                    fontSize: 30,
+                  }}
                 />
                 <Text
                   uppercase
@@ -185,10 +190,12 @@ const Home = (props) => {
                   justifyContent: "center",
                 }}
               >
-                <Icon
-                  type="MaterialCommunityIcons"
+                <MaterialCommunityIcons
                   name="bell"
-                  style={{ color: currentTab === 2 ? "black" : "white" }}
+                  style={{
+                    color: currentTab === 2 ? "black" : "white",
+                    fontSize: 30,
+                  }}
                 />
                 <Text
                   uppercase
@@ -225,10 +232,12 @@ const Home = (props) => {
                   justifyContent: "center",
                 }}
               >
-                <Icon
-                  type="MaterialIcons"
+                <MaterialIcons
                   name="image"
-                  style={{ color: currentTab === 3 ? "black" : "white" }}
+                  style={{
+                    color: currentTab === 3 ? "black" : "white",
+                    fontSize: 30,
+                  }}
                 />
                 <Text
                   uppercase
@@ -245,9 +254,6 @@ const Home = (props) => {
           }
         >
           <ImageVisor navigation={props.navigation} />
-          {/* <View>
-            <Text>fddfd</Text>
-          </View> */}
         </Tab>
         <Tab
           heading={
@@ -268,10 +274,12 @@ const Home = (props) => {
                   justifyContent: "center",
                 }}
               >
-                <Icon
-                  type="MaterialIcons"
+                <MaterialIcons
                   name="play-arrow"
-                  style={{ color: currentTab === 4 ? "black" : "white" }}
+                  style={{
+                    color: currentTab === 4 ? "black" : "white",
+                    fontSize: 30,
+                  }}
                 />
                 <Text
                   uppercase
@@ -287,7 +295,7 @@ const Home = (props) => {
             </TabHeading>
           }
         >
-          <VideoPlayer navigation={props.navigation} />
+          <PlayVideo navigation={props.navigation} />
         </Tab>
         <Tab
           heading={
@@ -308,10 +316,12 @@ const Home = (props) => {
                   justifyContent: "center",
                 }}
               >
-                <Icon
-                  type="MaterialCommunityIcons"
+                <MaterialCommunityIcons
                   name="account"
-                  style={{ color: currentTab === 5 ? "black" : "white" }}
+                  style={{
+                    color: currentTab === 5 ? "black" : "white",
+                    fontSize: 30,
+                  }}
                 />
                 <Text
                   uppercase
