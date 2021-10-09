@@ -111,9 +111,7 @@ export default function SearchPlaces(props) {
                 marginBottom: 25,
               }}
               data={elementsFiltrados}
-              keyExtractor={(item) =>
-                `${item.coordenadas.latitude}${item.coordenadas.longitude}`
-              }
+              keyExtractor={(item) => item.key}
               initialNumToRender={7}
               removeClippedSubviews
               renderItem={({ item }) => (

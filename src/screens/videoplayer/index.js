@@ -1,47 +1,51 @@
-import React from "react";
-import { Container, View } from "native-base";
-import { Dimensions, StyleSheet } from "react-native";
+import * as React from "react";
+import { View, StyleSheet, Button } from "react-native";
 import { Video } from "expo-av";
 
-const { width } = Dimensions.get("window");
-
-const PlayVideo = (props) => {
-  const videoError = (e) => {
-    console.log(e);
-  };
+export default function PlayVideo() {
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
   return (
-    <Container>
-      <View style={styles.container}>
-        <View>
-          <Video
-            // source={require("../../assets/video.mp4")}
-            source={{
-              uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
-            }}
-            resizeMode="cover"
-            useNativeControls
-            rate={1.0}
-            style={styles.backgroundVideo}
-            onError={videoError}
-          />
-        </View>
+    <View style={styles.container}>
+      <Video
+        ref={video}
+        style={styles.video}
+        source={{
+          uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+        }}
+        useNativeControls
+        resizeMode="contain"
+        isLooping
+        onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+      />
+      <View style={styles.buttons}>
+        <Button
+          title={status.isPlaying ? "Pause" : "Play"}
+          onPress={() =>
+            status.isPlaying
+              ? video.current.pauseAsync()
+              : video.current.playAsync()
+          }
+        />
       </View>
-    </Container>
+    </View>
   );
-};
-
-export default PlayVideo;
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
     justifyContent: "center",
-    marginHorizontal: 25,
+    backgroundColor: "#ecf0f1",
   },
-  backgroundVideo: {
-    width: width - 40,
-    height: 300,
+  video: {
+    alignSelf: "center",
+    width: 320,
+    height: 200,
+  },
+  buttons: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
